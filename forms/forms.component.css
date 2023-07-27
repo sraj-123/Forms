@@ -1,0 +1,24 @@
+.btn{
+    /* margin: 5px; */
+    margin-left: 15px;
+    }
+textarea{
+    width: 100%;
+}
+
+input[type="text"]{
+    width: 80%;
+    margin: 10px;
+    margin-top: 20px;
+}
+select{
+    width:80%;
+}
+.container{
+    margin-top: 40px;
+}
+.row{
+    margin-bottom: 10px;
+}
+
+

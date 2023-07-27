@@ -1,0 +1,107 @@
+<div class="formss">
+    
+<div class="container md-4">
+    <h2>Form Validation <span style="color:red">*</span></h2>
+    <div class="row card bg-light">
+
+        <div class="col-13">
+            
+            <form [formGroup]="loginUser" class="form-group">
+                <input type="text" class="form-control p-7" placeholder="Associate Name" style="border-color:red" formControlName="name">
+                <span style="color:red" *ngIf="name && name.invalid">Please enter the Associate Name </span>
+                <br>
+                <br>
+                <input type="text" class="form-control p-7" placeholder="Please enter Associate id" style="border-color:red" formControlName="id">
+                <span style="color:red" *ngIf="id && id.invalid">Please enter the Associate id </span>
+                <br>
+                <br>
+                <input type="text" class="form-control p-7" placeholder="Please enter Project id" style="border-color:red" formControlName="projectId">
+                <span style="color:red" *ngIf="projectId && projectId.invalid">Please enter the Project Id </span>
+                <br>
+                <br>
+                <input type="radio" value="offshore" name="offshore" class="form-check-input">offshore
+                <input type="radio" class="" value="onshore" name="offshore" class="form-check-input">onshore
+                <br>
+                <br>
+                <select value="Select Option" class="form-select" value="Select the location" >
+                    <option value="1">Select the Location</option>
+                    <option value="2">Chennai</option>
+                    <option value="3">Banglore</option>
+                    <option value="4">Hydrabad</option>
+                </select>
+                <span style="color:red" *ngIf="Location && Location.invalid">Please select the location</span>
+                <br>
+                <br>
+                <div class="container1 ">
+                    <div class="row" >
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input" formControlName="Skills">HTML5,CSS3,JS
+
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input " style="margin-left: 25px; margin-bottom: 30px;" formControlName="Skills">Angular 8
+                        </div>
+
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input" formControlName="Skills">Express JS
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="checkbox" class="form-check-input" formControlName="Skills">SASS
+                                
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="form-check-input" style="margin-left: 33px;" formControlName="Skills">React Js
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" class="form-check-input" style="margin-left: 17px; margin-bottom: 30px;" formControlName="Skills">Node Js
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="checkbox" class="form-check-input" formControlName="Skills"formControlName="Skills">ES5,ES6,ES7
+
+                                </div>
+                                <div class="col">
+                                    <input type="checkbox" class="form-check-input" style="margin-left: 40px;" formControlName="Skills">Veu Js
+
+                                </div>
+                                <div class="col">
+                                    <input type="checkbox" class="form-check-input" style="margin-left: 36px; margin-bottom: 30px;" formControlName="Skills">Mango Db
+
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="checkbox" class="form-check-input" formControlName="Skills">Boostrap
+                                    </div>
+                                    <div class="col">
+                                        <input type="checkbox" class="form-check-input" formControlName="Skills" >Typescript
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <br>
+                <label for="Upload Profile" class="form-label">Upload Profile</label><br>
+                <input type="file" class="form-file" formControlName="files"><br>
+                <span *ngIf="files && files.invalid" style="color:red">Please select Location</span>
+                <br>
+                <br>
+                <textarea style="border:2px solid red;" class="form-control" name="" id="" cols="10" rows="10" style="width:80%; height: 70px;" value="comments" placeholder="Comments" formControlName="comment"></textarea>
+                <span style="color:red" *ngIf="comment && comment.invalid" style="color:red">Please enters comments </span>
+                <br>
+                <br>
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-danger">Reset</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+</div>
